@@ -20,23 +20,23 @@ function Post({
     return (
         <div className = "post">
             <div className = "post-avatar">
-                <Avatar />
+                <Avatar src = {avatar}/>
             </div>
             <div className= "post-body">
                 <div className = "post-header">
                     <div className = "post-header-text">
                         <h3>
-                            Sarthak Johnson Prasad{" "} 
+                            {displayName}{" "} 
                             <span className = "post-header-special">
-                                <VerifiedUserIcon className = "post-badge"/> @sarthakjp
+                                {isVerified && <VerifiedUserIcon className = "post-badge"/>} @{userName}
                             </span>
                         </h3>
                     </div>
                     <div className = "post-header-description">
-                        <p>Shut the fuck up!</p>
+                        <p>{message}</p>
                     </div>
                 </div>
-                <img src = "https://media.giphy.com/media/t9AUx8OXJ4O4hr4xU8/giphy.gif"/>
+                <img src = {image} alt = ""/>
                 <div className= "post-footer">
                     <ChatBubbleOutlineIcon fontSize = "small"/>
                     <RepeatIcon fontSize = "small"/>
